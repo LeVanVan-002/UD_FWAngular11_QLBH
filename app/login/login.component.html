@@ -1,0 +1,19 @@
+<form #frmLogin="ngForm" (ngSubmit)="onSubmit(frmLogin)">
+    
+    <h2>Admin Login</h2>
+
+    <input required [(ngModel)]="user.user" type="text" placeholder="username" name="user" class="text-field"  />
+    <input type="pass" [(ngModel)]="user.pass" placeholder="password" name="pass" class="text-field"/>
+    
+    <button class="button" type="submit">Dang nhap</button>
+</form>
+<!-- 
+<form>
+
+    <h2>Admin Login</h2>
+
+    <input required type="text" placeholder="username" name="user" class="text-field" />
+    <input type="text" placeholder="password" name="pass" class="text-field" />
+
+    <button class="button" type="submit">Dang nhap</button>
+</form> -->

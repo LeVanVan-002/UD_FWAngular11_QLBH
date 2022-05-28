@@ -1,0 +1,57 @@
+<div class="row">
+    <H3>Sửa Nhân Viên </H3>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Tên Nhân Viên</label>
+            <input type="text" name="name" id="" class="form-control" [(ngModel)]="dataAccountEdit.name">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Hình Ảnh Nhân Viên</label> <br>
+            <input class="form-control" [(ngModel)]="dataAccountEdit.image" type="text"  name="image">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Địa Chỉ Nhân Viên</label> <br>
+            <textarea name="address" id="" cols="94" rows="3" [(ngModel)]="dataAccountEdit.address"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Số Điện Thoại Nhân Viên</label> <br>
+            <input type="number" name="phone" id="" class="form-control" [(ngModel)]="dataAccountEdit.phone">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Lương Nhân Viên</label> <br>
+            <input type="number" name="price" id="" class="form-control" [(ngModel)]="dataAccountEdit.price">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Ngày Sinh Nhân Viên</label> <br>
+            <input type="date" name="birthday" id="" class="form-control" [(ngModel)]="dataAccountEdit.birthday">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 mt-2">
+        <button class="btn btn-warning" (click)="saveAccountEdit()"> + Cập Nhật NV +</button>
+    </div>
+</div>

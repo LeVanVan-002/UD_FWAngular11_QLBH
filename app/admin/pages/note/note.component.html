@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-body">
+    <app-myform *ngIf="isShowEnterNote" (write-note)="getNote($event)"></app-myform>
+    <app-editform *ngIf="isShowEditNote" [edit-form]="onenote" (save-edit)="getNoteEdited($event)"></app-editform>
+    <button class="btn btn-success" *ngIf="isShowButton" (click)="showEnterNote()">Thêm Sản Phẩm +</button>
+    <hr>
+    <app-mylist [show-notes]="notes" (edit)="getNoteIndex($event)"></app-mylist>
+  </div>
+</div>

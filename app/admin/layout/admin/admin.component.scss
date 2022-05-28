@@ -1,0 +1,22 @@
+#sidebarMenu {
+    height: calc(80vh - 40px);
+    background-color: rgb(50, 53, 53);
+    ul {
+        li{
+            a {
+                border-bottom: 1px solid;
+                color: white;
+                background-color: rgb(46, 68, 68);
+                &:hover {
+                    background-color: rgb(15, 240, 240);
+                    color: yellow;
+                }
+                &.active {
+                    background-color: rgb(30, 184, 184);
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-body">
+        <app-myformm *ngIf="isShowEnterAccount" (write-userr)="getAccount($event)"></app-myformm>
+        <app-editformm *ngIf="isShowEditAccount" [edit-formm]="oneaccount" (save-editt)="getAccountEdited($event)"></app-editformm>
+        <button class="btn btn-success" *ngIf="isShowButton" (click)="showEnterAccount()">Thêm Nhân Viên +</button>
+        <hr>
+        <app-mylistt [show-userr]="accounts" (edit-userr)="getAccountIndex($event)"></app-mylistt>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<table class="table table-striped table-inverse table-bordered">
+    <thead class="thead-inverse">
+        <tr class="textTrColor ">
+            <th>STT</th>
+            <th>Tên Sản Phẩm </th>
+            <th>Mô Tả Sản Phẩm</th>
+            <th>Hình Ảnh Sản Phẩm</th>
+            <th>Giá Sản Phẩm</th>
+            <th>Ngày Tạo </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listNotes; index as i" appHighlight listColor="aqua">
+            <td scope="row">{{i+1}}</td>
+            <td class="tdmaxwidth">{{item.title | uppercase}}</td>
+            <td class="tdmaxwidth">{{item.content}}</td>
+            <td>
+                <img width="60" height="60" [src]="item.image" alt="" srcset="">
+              </td>
+            <td>{{item.price |currency}}</td>
+            <td> ngày : {{item.dateNote | date:'d/M/yyyy '}} vào lúc :  {{item.dateNote | date:'HH:mm:ss'}}   </td>
+            <!-- HH:mm:ss giờ phút giây  -->
+          
+        </tr>
+    </tbody>
+</table>
+
+
+

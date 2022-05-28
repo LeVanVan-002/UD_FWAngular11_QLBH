@@ -1,0 +1,31 @@
+* {
+    margin: 0 auto;
+
+    padding: 0;
+}
+
+.nav{
+    ul{
+        list-style: none;
+        background: rgb(96, 96, 247);
+        margin: 0;
+        li{
+            display: inline-flex;
+            a{
+                text-decoration: none;
+                padding: 10px 40px;
+                color: #ffff;
+                border-right: 1px solid white;
+                &:hover{
+                    background: aqua;
+                    color: black;
+                }
+                &:last-child{
+                    border-right: none;
+                }
+            }      
+        }
+        
+    }
+    
+}

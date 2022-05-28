@@ -1,0 +1,41 @@
+<div class="row">
+    <H3>Sửa Sản Phẩm </H3>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Tên Sản Phẩm</label>
+            <input type="text" name="title" id="" class="form-control" [(ngModel)]="dataNoteEdit.title">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Mô Tả Sản Phẩm</label> <br>
+            <textarea name="content" id="" cols="94" rows="3" [(ngModel)]="dataNoteEdit.content"></textarea>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Hình Ảnh Sản Phẩm</label> <br>
+            <input class="form-control" [(ngModel)]="dataNoteEdit.image" type="text"  name="image">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="">Chỉnh Sửa Giá Sản Phẩm</label> <br>
+            <input type="number" name="price" id="" class="form-control" [(ngModel)]="dataNoteEdit.price">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 mt-2">
+        <button class="btn btn-warning" (click)="saveNoteEdit()"> + Cập Nhật SP +</button>
+    </div>
+</div>

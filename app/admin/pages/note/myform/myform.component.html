@@ -1,0 +1,66 @@
+<div class="row">
+    <h3>Thêm Sản Phẩm Mới </h3>
+
+</div>
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Tên Sản Phẩm</label>
+                <input type="text" formControlName="title" id="" class="form-control">
+                <div *ngIf="(noteForm.get('title').dirty || noteForm.get('title').touched) && noteForm.get('title').errors?.required"
+                    class="alert alert-danger" role="alert">
+                    <strong>Tên Sản phẩm bắt buộc </strong>
+                </div>
+                <div *ngIf="noteForm.get('title').errors?.minlength" class="alert alert-danger" role="alert">
+                    <strong>Tên Sản phẩm trên 3 kí tự </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Mô Tả Sản Phẩm</label> <br>
+                <textarea formControlName="content" id="" cols="94" rows="5"></textarea>
+                <div *ngIf="(noteForm.get('content').dirty || noteForm.get('content').touched) && noteForm.get('content').errors?.required"
+                    class="alert alert-danger" role="alert">
+                    <strong>Mô Tả Sản phẩm bắt buộc </strong>
+                </div>
+                <div *ngIf="noteForm.get('content').errors?.minlength" class="alert alert-danger" role="alert">
+                    <strong>Mô Tả Sản phẩm trên 3 kí tự </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Hình Ảnh Sản Phẩm</label> <br>
+                <input formControlName="image" class="form-control" type="text">
+            </div>
+            <div *ngIf="(noteForm.get('image').dirty || noteForm.get('image').touched) && noteForm.get('image').errors?.required"
+                class="alert alert-danger" role="alert">
+                <strong>Ảnh Sản phẩm bắt buộc </strong>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Giá Sản Phẩm</label> <br>
+                <input formControlName="price" type="number" id="" class="form-control">
+                <div *ngIf="(noteForm.get('price').dirty || noteForm.get('price').touched) && noteForm.get('price').errors?.required"
+                    class="alert alert-danger" role="alert">
+                    <strong>Giá Sản phẩm bắt buộc </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mt-2">
+            <button class="btn btn-primary" type="submit">Thêm Mới </button>
+        </div>
+    </div>
+</form>

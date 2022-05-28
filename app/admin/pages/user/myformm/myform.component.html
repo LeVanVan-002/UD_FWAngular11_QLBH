@@ -1,0 +1,89 @@
+<div class="row">
+    <h3>Thêm Nhân Viên Mới </h3>
+</div>
+<form action="" [formGroup]="userForm" (ngSubmit)="onSubmit1()">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Tên Nhân Viên</label>
+                <input type="text"  id="" class="form-control"  formControlName="name"  >
+                <div *ngIf="(userForm.get('name').dirty || userForm.get('name').touched) && userForm.get('name').errors?.required"
+                class="alert alert-danger" role="alert">
+                <strong>Tên nhân viên là  bắt buộc </strong>
+            </div>
+            <div *ngIf="userForm.get('name').errors?.minlength" class="alert alert-danger" role="alert">
+                <strong>Tên trên 3 kí tự </strong>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Hình Ảnh </label> <br>
+                <input class="form-control" type="text"  formControlName="image">
+                <div *ngIf="(userForm.get('image').dirty || userForm.get('image').touched) && userForm.get('image').errors?.required"
+                class="alert alert-danger" role="alert">
+                <strong>Ảnh là bắt buộc </strong>
+            </div>
+           
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Địa Chỉ Hiện Tại</label> <br>
+                <textarea  id="" cols="94" rows="5"       formControlName="address"   ></textarea>
+                <div *ngIf="(userForm.get('address').dirty || userForm.get('address').touched) && userForm.get('address').errors?.required"
+                class="alert alert-danger" role="alert">
+                <strong>Địa Chỉ là  bắt buộc </strong>
+            </div>
+            <div *ngIf="userForm.get('address').errors?.minlength" class="alert alert-danger" role="alert">
+                <strong>Địa chỉ trên 3 kí tự </strong>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Số Điện Thoại</label> <br>
+                <input type="number" id="" class="form-control"  formControlName="phone">
+                <div *ngIf="(userForm.get('phone').dirty || userForm.get('phone').touched) && userForm.get('phone').errors?.required"
+                class="alert alert-danger" role="alert">
+                <strong>Số điện thoại là  bắt buộc </strong>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Lương Nhân Viên</label> <br>
+                <input type="number"  id="" class="form-control"  formControlName="price"      >
+                <div *ngIf="(userForm.get('price').dirty || userForm.get('price').touched) && userForm.get('price').errors?.required"
+                class="alert alert-danger" role="alert">
+                <strong>Lương Nhân Viên là  bắt buộc </strong>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="">Ngày Tháng Năm Sinh</label> <br>
+                <input type="date"  id="" class="form-control"   formControlName="birthday"   >
+                <div *ngIf="(userForm.get('birthday').dirty || userForm.get('birthday').touched) && userForm.get('birthday').errors?.required"
+                class="alert alert-danger" role="alert">
+                <strong>Ngày tháng năm sinh là  bắt buộc </strong>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mt-2">
+            <button class="btn btn-primary" >Thêm Mới +</button>
+        </div>
+    </div>
+</form>
